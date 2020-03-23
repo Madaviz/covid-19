@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>-->
+  <link href="css/style.css" rel="stylesheet" type="text/css"> 
+  <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />-->
+  
+  <script src="js/leaflet.js"></script>
+  <link href="css/leaflet.css" rel="stylesheet" type="text/css"> 
+  
+  <!-- <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+<!--  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">-->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	
+</head>
+
+<body>
+
+    <main>
+	<!--<div id="loading"></div>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery('#loading').fadeOut(000);
+		});
+	</script>-->
+	
+	<script src="data/SickHistoricAggregated.js" type="text/javascript"></script>
+	
+	<div class="grid-container">
+		<div class="item1 key-layer" >
+		
+		  <img class="drapeau" src="images/drapeau.png" width="50" height="30">
+		  
+			<h1 >Coronavirus COVID-19 à Madagascar</h1>
+			<div class = "urgence">
+				<p class = "num-urgence">N° pour des renseignements : 910 </p>
+				<p class = "num-urgence">N° en cas de symptômes inquiétants : 913 </p>
+			</div>
+			
+		</div>
+		
+		<div class="item2">
+			<div class="inner key-layer kpi1"><h4 >Nombre Total de Cas Détectés</h4>
+			<p id="sum-sick"> 12</p> 
+			</div>
+			<div class="inner key-layer kpi2"><h4 >Nombre Total de Morts</h4>
+			<p id="sum-dead"> 0</p>
+			</div>
+			<div class="inner key-layer kpi3"><h4 >Cas confirmés par Province</h4>
+				<div class="province"><div class="province-name" >	Antananarivo </div><div class="province-figure" id = "Antananarivo">	12  </div>  </div>
+				<div class="province"><div class="province-name">	Antsiranana  </div><div class="province-figure" id = "Antsiranana">	0 </div>  </div>
+				<div class="province"><div class="province-name">	Fianarantsoa </div><div class="province-figure" id = "Fianarantsoa">	0 </div>  </div>
+				<div class="province"><div class="province-name">	Mahajanga    </div><div class="province-figure" id = "Mahajanga">	0 </div>  </div>
+				<div class="province"><div class="province-name">	Toamasina    </div><div class="province-figure" id = "Toamasina">	0 </div>  </div>
+				<div class="province"><div class="province-name">	Toliary      </div><div class="province-figure" id = "Toliary">	0 </div>  </div>
+				
+			</div>
+		</div>
+		
+		<div class="item3">		
+		
+			<div class="tab key-layer main">
+			<!--  <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'mapRegions')">Regions</button>-->
+			<!--  <button class="tablinks" onclick="openCity(event, 'mapDistricts')">Districts</button>-->
+			<div id="mapRegions" class="tabcontent"></div>
+			<!--<div id="mapDistricts" class="tabcontent"> A venir </div>-->
+			</div>
+			
+		</div>  
+		
+		<div class="item4">
+			<a class="twitter-timeline" data-width="100%" data-height="300" href="https://twitter.com/madaviz?ref_src=twsrc%5Etfw">Tweets by madaviz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			<div class="graph-evolution key-layer">
+				<canvas id="line-chart" width="100%" height="250px" ></canvas>
+			</div>
+		</div>
+		
+		<div class="item5 key-layer"><h3 >Sources de données : Déclarations du Président de la République Malgache</h3></div>
+		<div class="item6">
+			Is Inspired by <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins</a>
+			&copy; <a href="https://twitter.com/madaviz">Madaviz</a> 
+		</div>
+	</div>
+
+	  <script src="data/MadaDataLevel2.js" type="text/javascript"></script>
+	  <!--<script src="data/MadaDataLevel3.js" type="text/javascript"></script>-->
+	  
+	  <script src="js/line-chart.js" type="text/javascript"></script>
+	  
+      <script src="js/script.js"></script>
+	  
+	  <!-- <script src="js/mapDistricts.js"></script> -->
+      
+    </main>
+
+</body>
+</html>
